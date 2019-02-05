@@ -3,3 +3,13 @@ Resource          ../../../Env/default.txt
 
 *** Variables ***
 #---- Promptset Fields --------------------------------------------------------------------------------------
+${Brkr_Adrs}                Add Value Here    
+${SSL_Tru_Store_Loc}          Add Value Here
+${SSL_Tru_Store_Pwd}           Add Value Here
+${SSL_Key_Store_Loc}          Add Value Here
+${SSL_Key_Store_Pwd}          Add Value Here
+${SSL_Pwd}        	 Add Value Here
+#----Send Message-------------------------------------------------------------------------------------
+${Topic}        Add Value Here
+${Message}        Add Value Here
+${RetryCount}      Add Value Here

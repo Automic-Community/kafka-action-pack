@@ -1,0 +1,58 @@
+*** Settings ***
+Suite Setup       Startup
+Suite Teardown    Teardown
+Force Tags        KAFKA_SEND_MESSAGE
+Test Template     KAFKA_SEND_MESSAGE Template
+Library           com.automic.robot.itpa.ItpaLibrary
+Library           String
+Library           DateTime
+Resource          ../../Resources/messages.txt
+Resource          ../../Resources/keywords.txt
+Resource          ../../Resources/variables.txt
+Resource          ../../Resources/actions.txt
+
+*** Test Cases ***    OK_NOK    Topic       Message       RetryCount       
+Send_Message with all valid field values
+                      [Tags]    main_scenarios
+                      OK        ${Topic}    ${Message}          ${RetryCount}
+
+Send_Message with Invalid Topic
+                      [Tags]    Invalid           ${Message}    ${RetryCount}
+
+Send_Message with invalid Message
+                      NOK       ${Topic}            Invalid          ${RetryCount} 
+
+Send_Message with EMPTY Topic
+                      NOK       ${EMPTY}            ${Message}          ${RetryCount} 
+
+Send_Message with EMPTY Message
+                      NOK       ${Topic}    ${EMPTY}          ${RetryCount1}   
+
+
+*** Keywords ***
+Startup
+    Log    *******Start Test "Send_Message"*******
+    Log    *******Connect to AE*******
+    Connect AE
+
+KAFKA_SEND_MESSAGE Template
+    [Arguments]    ${OK_NOK}    ${Topic}    ${Message}    ${RetryCount}
+    [Documentation]    This test tests the feature of Get Message.
+    ...    -${OK_NOK}: Boolean value indicate if the action is ENDED_OK or ENDED_NOT_OK. Value of this variable should be OK or NOK.
+    ...    -${Topic}: This field specifies topic to use for sending a message.
+    ...    -${Message}: This field specifies the a message to send to the Broker.
+    ...    -${RetryCount}: This field specifies  the number of retries of message sending fails on the first try.
+
+    Generate String
+    Init Action    ${KAFKA_SEND_MESSAGE_ACTION}
+	Connect to Apache Kafka
+    Run Keyword If    '${Topic}' == 'Invalid'    Action Set    &UC4RB_KFK_TOPIC#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_KFK_TOPIC#    ${Topic}
+    Run Keyword If    '${Message}' == 'Invalid'    Action Set    &UC4RB_KFK_MESSAGE#    ${Generated_Name}_${Time}    ELSE    Action Set
+    ...    &UC4RB_KFK_MESSAGE#    ${Message}
+    Run Keyword If    '${RetryCount}'    Action Set    &UC4RB_KFK_RETRY_COUNT#    ${RetryCount}
+    Action Execute
+    Run Keyword If    '${OK_NOK}' == 'OK'    Assert Success    ELSE    Assert Failure
+
+Teardown
+    Log    *******End Test "Send_Message"*******
