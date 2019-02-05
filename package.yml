@@ -1,0 +1,14 @@
+# Package Build Configuration
+name: PCK.AUTOMIC_APACHE_KAFKA
+
+source: ae
+  
+# binary object resource mapping will be defined here
+binaries:
+  
+  - object: RESOURCES/LIBS/PCK.AUTOMIC_APACHE_KAFKA.PRV.STORE
+    resources: 
+      - name: KAFKATOOL
+        type: BINARY
+        path: tools/target/kafka-tool.jar
+        version: 1.0.0
