@@ -16,12 +16,6 @@ public class ExceptionConstants {
 	public static final String INVALID_FILE = "Invalid file [%s], possibly file doesn't exists";
 	public static final String GENERIC_ERROR_MSG = "System Error occured.";
 
-	// Certificate errors
-	public static final String ERROR_SKIPPING_CERT = "Error skipping the certificate validation";
-	public static final String INVALID_KEYSTORE = "Invalid KeyStore : %s";
-	public static final String SSLCONTEXT_ERROR = "Unable to build secured context : %s";
-	public static final String INVALID_JSON_CONTENT = "Invalid Json Content provided.";
-	
 	private ExceptionConstants() {
 	}
 }

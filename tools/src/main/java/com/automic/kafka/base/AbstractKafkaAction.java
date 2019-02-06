@@ -14,23 +14,23 @@ import com.automic.kafka.util.CommonUtil;
  */
 public abstract class AbstractKafkaAction extends AbstractAction {
 
-
-
-	/**
-	 * Json File Path
-	 */
-	protected File jsonFilePath;
-	
+	protected String brokerAddress;
+	protected String sslTruststoreLocation;
+	protected String sslTruststorePassword;
+	protected String sslKeystoreLocation;
+	protected String sslkeystorePassword;
+	protected String sslPassword;
 
 	public AbstractKafkaAction() {
-		addOption(Constants.JSON_FILE_PATH, true, "Json File Path");
+		addOption(Constants.BROKER_ADDRESS, true, "Broker Address");
+		addOption(Constants.SSL_TRUSTSTORE_LOCATION, false, "SSL Truststore Location");
+		addOption(Constants.SSL_KEYSTORE_LOCATION, false, "SSL Keystore Location");
 	}
 
 	/**
 	 * This method initializes the arguments and calls the execute method.
 	 *
-	 * @throws AutomicException
-	 *             exception while executing an action
+	 * @throws AutomicException exception while executing an action
 	 */
 	public final void execute() throws AutomicException {
 		prepareCommonInputs();
@@ -38,15 +38,17 @@ public abstract class AbstractKafkaAction extends AbstractAction {
 	}
 
 	private void prepareCommonInputs() throws AutomicException {
-		String temp = getOptionValue(Constants.JSON_FILE_PATH);
-		if (!CommonUtil.checkNotEmpty(temp)) {
-			throw new AutomicException(String.format(ExceptionConstants.INVALID_INPUT_PARAMETER, "Json File Path", temp));
+		brokerAddress = getOptionValue(Constants.BROKER_ADDRESS);
+		if (!CommonUtil.checkNotEmpty(brokerAddress)) {
+			throw new AutomicException(
+					String.format(ExceptionConstants.INVALID_INPUT_PARAMETER, "Broker Address", brokerAddress));
 		}
-		jsonFilePath = new File(temp);
-		CommonUtil.checkFileExists(jsonFilePath, "Json File Path");
-		if (jsonFilePath.length() == 0) {
-			throw new AutomicException("Provided Json content is empty");
-		}
+		sslTruststoreLocation = getOptionValue(Constants.SSL_TRUSTSTORE_LOCATION);
+		sslKeystoreLocation = getOptionValue(Constants.SSL_KEYSTORE_LOCATION);
+
+		sslTruststorePassword = System.getenv(Constants.SSL_TSTORE_PWD);
+		sslkeystorePassword = System.getenv(Constants.SSL_KSTORE_PWD);
+		sslPassword = System.getenv(Constants.SSL_PWD);
 
 	}
 
