@@ -29,6 +29,7 @@ public class Constants {
 	public static final String TOPIC = "topic";
 	public static final String MESSAGE = "message";
 	public static final String RETRY_COUNT = "retrycount";
+	public static final String SSL = "ssl";
 
 	private Constants() {
 	}

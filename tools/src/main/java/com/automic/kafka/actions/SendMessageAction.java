@@ -88,16 +88,18 @@ public class SendMessageAction extends AbstractKafkaAction {
 		props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
 
 		// configure the following three settings for SSL Encryption
-		if (CommonUtil.checkNotEmpty(sslKeystoreLocation)) {
+		if (ssl) {
 			props.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SSL");
-			props.put(SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG, sslTruststoreLocation);
-			props.put(SslConfigs.SSL_TRUSTSTORE_PASSWORD_CONFIG, sslTruststorePassword);
-		}
-		// configure the following three settings for SSL Authentication
-		if (CommonUtil.checkNotEmpty(sslTruststoreLocation)) {
-			props.put(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG, sslKeystoreLocation);
-			props.put(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG, sslkeystorePassword);
-			props.put(SslConfigs.SSL_KEY_PASSWORD_CONFIG, sslPassword);
+			if (CommonUtil.checkNotEmpty(sslKeystoreLocation)) {
+				props.put(SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG, sslTruststoreLocation);
+				props.put(SslConfigs.SSL_TRUSTSTORE_PASSWORD_CONFIG, sslTruststorePassword);
+			}
+			// configure the following three settings for SSL Authentication
+			if (CommonUtil.checkNotEmpty(sslTruststoreLocation)) {
+				props.put(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG, sslKeystoreLocation);
+				props.put(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG, sslkeystorePassword);
+				props.put(SslConfigs.SSL_KEY_PASSWORD_CONFIG, sslPassword);
+			}
 		}
 
 		return new KafkaProducer<String, String>(props);

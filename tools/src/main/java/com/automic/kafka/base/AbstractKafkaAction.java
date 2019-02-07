@@ -1,7 +1,5 @@
 package com.automic.kafka.base;
 
-import java.io.File;
-
 import com.automic.kafka.constants.Constants;
 import com.automic.kafka.constants.ExceptionConstants;
 import com.automic.kafka.exception.AutomicException;
@@ -20,11 +18,13 @@ public abstract class AbstractKafkaAction extends AbstractAction {
 	protected String sslKeystoreLocation;
 	protected String sslkeystorePassword;
 	protected String sslPassword;
+	protected boolean ssl;
 
 	public AbstractKafkaAction() {
 		addOption(Constants.BROKER_ADDRESS, true, "Broker Address");
 		addOption(Constants.SSL_TRUSTSTORE_LOCATION, false, "SSL Truststore Location");
 		addOption(Constants.SSL_KEYSTORE_LOCATION, false, "SSL Keystore Location");
+		addOption(Constants.SSL, true, "SSL");
 	}
 
 	/**
@@ -43,13 +43,13 @@ public abstract class AbstractKafkaAction extends AbstractAction {
 			throw new AutomicException(
 					String.format(ExceptionConstants.INVALID_INPUT_PARAMETER, "Broker Address", brokerAddress));
 		}
+		ssl = CommonUtil.convert2Bool(getOptionValue(Constants.SSL));
 		sslTruststoreLocation = getOptionValue(Constants.SSL_TRUSTSTORE_LOCATION);
 		sslKeystoreLocation = getOptionValue(Constants.SSL_KEYSTORE_LOCATION);
 
 		sslTruststorePassword = System.getenv(Constants.SSL_TSTORE_PWD);
 		sslkeystorePassword = System.getenv(Constants.SSL_KSTORE_PWD);
 		sslPassword = System.getenv(Constants.SSL_PWD);
-
 	}
 
 	/**
