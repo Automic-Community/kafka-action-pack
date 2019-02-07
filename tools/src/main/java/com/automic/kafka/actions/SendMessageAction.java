@@ -1,14 +1,15 @@
 package com.automic.kafka.actions;
 
 import java.util.Properties;
+import java.util.concurrent.ExecutionException;
 
 import org.apache.kafka.clients.CommonClientConfigs;
-import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
+import org.apache.kafka.common.KafkaException;
 import org.apache.kafka.common.config.SslConfigs;
 
 import com.automic.kafka.base.AbstractKafkaAction;
@@ -16,10 +17,11 @@ import com.automic.kafka.constants.Constants;
 import com.automic.kafka.constants.ExceptionConstants;
 import com.automic.kafka.exception.AutomicException;
 import com.automic.kafka.util.CommonUtil;
+import com.automic.kafka.util.ConsoleWriter;
 
 /**
  * 
- * Reads the value of the JSON content by key
+ * This action sends a message to the Kafka broker.
  * 
  * @author vijendraparmar
  *
@@ -33,7 +35,7 @@ public class SendMessageAction extends AbstractKafkaAction {
 	private int retryCount;
 
 	/**
-	 * Initializes a newly created {@code GetDataAction}
+	 * Initializes a newly created {@code SendMessageAction}
 	 */
 	public SendMessageAction() {
 		addOption(Constants.TOPIC, true, "Topic");
@@ -44,13 +46,23 @@ public class SendMessageAction extends AbstractKafkaAction {
 	@Override
 	protected void executeSpecific() throws AutomicException {
 		prepareAndValidateInputs();
-
-		Producer<String, String> producer = createProducer();
-		TCallback callback = new TCallback();
+		Producer<String, String> producer = null;
 		ProducerRecord<String, String> data = new ProducerRecord<String, String>(topic, message);
-		producer.send(data, callback);
+		try {
+			producer = createProducer();
+			RecordMetadata metadata = producer.send(data).get();
 
-		producer.close();
+			String message = String.format("Sent message to topic:%s partition:%s  offset:%s", metadata.topic(),
+					metadata.partition(), metadata.offset());
+			ConsoleWriter.writeln(message);
+		} catch (ExecutionException | InterruptedException | KafkaException e) {
+			ConsoleWriter.writeln(e);
+			throw new AutomicException("Error while producing message to topic : " + topic);
+		} finally {
+			if (producer != null) {
+				producer.close();
+			}
+		}
 	}
 
 	private void prepareAndValidateInputs() throws AutomicException {
@@ -76,29 +88,18 @@ public class SendMessageAction extends AbstractKafkaAction {
 		props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
 
 		// configure the following three settings for SSL Encryption
-		props.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SSL");
-		props.put(SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG, sslTruststoreLocation);
-		props.put(SslConfigs.SSL_TRUSTSTORE_PASSWORD_CONFIG, sslTruststorePassword);
-
+		if (CommonUtil.checkNotEmpty(sslKeystoreLocation)) {
+			props.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SSL");
+			props.put(SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG, sslTruststoreLocation);
+			props.put(SslConfigs.SSL_TRUSTSTORE_PASSWORD_CONFIG, sslTruststorePassword);
+		}
 		// configure the following three settings for SSL Authentication
-		props.put(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG, sslKeystoreLocation);
-		props.put(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG, sslkeystorePassword);
-		props.put(SslConfigs.SSL_KEY_PASSWORD_CONFIG, sslPassword);
+		if (CommonUtil.checkNotEmpty(sslTruststoreLocation)) {
+			props.put(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG, sslKeystoreLocation);
+			props.put(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG, sslkeystorePassword);
+			props.put(SslConfigs.SSL_KEY_PASSWORD_CONFIG, sslPassword);
+		}
 
 		return new KafkaProducer<String, String>(props);
-	}
-
-	private class TCallback implements Callback {
-		@Override
-		public void onCompletion(RecordMetadata recordMetadata, Exception e) {
-			if (e != null) {
-				System.out.println("Error while producing message to topic :" + recordMetadata);
-				e.printStackTrace();
-			} else {
-				String message = String.format("sent message to topic:%s partition:%s  offset:%s",
-						recordMetadata.topic(), recordMetadata.partition(), recordMetadata.offset());
-				System.out.println(message);
-			}
-		}
 	}
 }

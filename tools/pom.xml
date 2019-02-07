@@ -59,12 +59,12 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.automic.json.client.Client</mainClass>
+							<mainClass>com.automic.kafka.client.Client</mainClass>
 						</manifest>
 
 						<manifestSections>
 							<manifestSection>
-								<name>json-tool</name>
+								<name>kafka-tool</name>
 								<manifestEntries>
 									<Application-BuildDate>${timestamp}</Application-BuildDate>
 									<Application-Version>${version}</Application-Version>
@@ -73,7 +73,7 @@
 							</manifestSection>
 						</manifestSections>
 					</archive>
-					<finalName>json-tool</finalName>
+					<finalName>kafka-tool</finalName>
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>

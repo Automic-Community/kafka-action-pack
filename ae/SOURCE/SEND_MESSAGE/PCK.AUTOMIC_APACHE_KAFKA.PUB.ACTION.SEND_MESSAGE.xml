@@ -58,10 +58,12 @@
 <PRPTBOX promptset="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">
 <UC4RB_KFK_BROKERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_BROKER#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS"/>
 <UC4RB_KFK_SSL_KSTORE_LOCs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_LOC#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS"/>
-<UC4RB_KFK_SSL_KSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10A61C94D6737EB659</UC4RB_KFK_SSL_KSTORE_PWDs.00s.00>
-<UC4RB_KFK_SSL_PWDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10A61C94D6737EB659</UC4RB_KFK_SSL_PWDs.00>
+<UC4RB_KFK_SSL_KSTORE_PWDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_KSTORE_PWDs.00>
+<UC4RB_KFK_SSL_KSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_KSTORE_PWDs.00s.00>
+<UC4RB_KFK_SSL_PWDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_PWDs.00>
 <UC4RB_KFK_SSL_TSTORE_LOCs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_LOC#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS"/>
-<UC4RB_KFK_SSL_TSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10A61C94D6737EB659</UC4RB_KFK_SSL_TSTORE_PWDs.00s.00>
+<UC4RB_KFK_SSL_TSTORE_PWDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_TSTORE_PWDs.00>
+<UC4RB_KFK_SSL_TSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_TSTORE_PWDs.00s.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -69,13 +71,16 @@
 <PROMPTSET name="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE">
 <PRPTBOX promptset="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE">
 <ELEMENT ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="ELEMENT" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE"/>
+<UC4RB_KFK_MESSAGEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_MESSAGE#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE"/>
+<UC4RB_KFK_RETRY_COUNTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_RETRY_COUNT#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE">5</UC4RB_KFK_RETRY_COUNTs.00>
+<UC4RB_KFK_TOPICs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_TOPIC#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10FBA41CCE80A626FF9F1A8BC87ECEB23E141388E66BC9D730</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
 <UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
 <UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
@@ -134,10 +139,12 @@
 <PRPTBOX promptset="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">
 <UC4RB_KFK_BROKERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_BROKER#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS"/>
 <UC4RB_KFK_SSL_KSTORE_LOCs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_LOC#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS"/>
-<UC4RB_KFK_SSL_KSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10A61C94D6737EB659</UC4RB_KFK_SSL_KSTORE_PWDs.00s.00>
-<UC4RB_KFK_SSL_PWDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10A61C94D6737EB659</UC4RB_KFK_SSL_PWDs.00>
+<UC4RB_KFK_SSL_KSTORE_PWDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_KSTORE_PWDs.00>
+<UC4RB_KFK_SSL_KSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_KSTORE_PWDs.00s.00>
+<UC4RB_KFK_SSL_PWDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_PWDs.00>
 <UC4RB_KFK_SSL_TSTORE_LOCs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_LOC#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS"/>
-<UC4RB_KFK_SSL_TSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10A61C94D6737EB659</UC4RB_KFK_SSL_TSTORE_PWDs.00s.00>
+<UC4RB_KFK_SSL_TSTORE_PWDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_TSTORE_PWDs.00>
+<UC4RB_KFK_SSL_TSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_TSTORE_PWDs.00s.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -145,13 +152,16 @@
 <PROMPTSET name="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE">
 <PRPTBOX promptset="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE">
 <ELEMENT ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="ELEMENT" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE"/>
+<UC4RB_KFK_MESSAGEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_MESSAGE#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE"/>
+<UC4RB_KFK_RETRY_COUNTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_RETRY_COUNT#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE">5</UC4RB_KFK_RETRY_COUNTs.00>
+<UC4RB_KFK_TOPICs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_TOPIC#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10FBA41CCE80A626FF9F1A8BC87ECEB23E141388E66BC9D730</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
 <UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
 <UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
@@ -210,10 +220,12 @@
 <PRPTBOX promptset="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">
 <UC4RB_KFK_BROKERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_BROKER#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS"/>
 <UC4RB_KFK_SSL_KSTORE_LOCs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_LOC#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS"/>
-<UC4RB_KFK_SSL_KSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10A61C94D6737EB659</UC4RB_KFK_SSL_KSTORE_PWDs.00s.00>
-<UC4RB_KFK_SSL_PWDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10A61C94D6737EB659</UC4RB_KFK_SSL_PWDs.00>
+<UC4RB_KFK_SSL_KSTORE_PWDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_KSTORE_PWDs.00>
+<UC4RB_KFK_SSL_KSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_KSTORE_PWDs.00s.00>
+<UC4RB_KFK_SSL_PWDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_PWDs.00>
 <UC4RB_KFK_SSL_TSTORE_LOCs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_LOC#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS"/>
-<UC4RB_KFK_SSL_TSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10A61C94D6737EB659</UC4RB_KFK_SSL_TSTORE_PWDs.00s.00>
+<UC4RB_KFK_SSL_TSTORE_PWDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_TSTORE_PWDs.00>
+<UC4RB_KFK_SSL_TSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_TSTORE_PWDs.00s.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -221,13 +233,16 @@
 <PROMPTSET name="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE">
 <PRPTBOX promptset="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE">
 <ELEMENT ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="ELEMENT" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE"/>
+<UC4RB_KFK_MESSAGEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_MESSAGE#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE"/>
+<UC4RB_KFK_RETRY_COUNTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_RETRY_COUNT#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE">5</UC4RB_KFK_RETRY_COUNTs.00>
+<UC4RB_KFK_TOPICs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_TOPIC#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10FBA41CCE80A626FF9F1A8BC87ECEB23E141388E66BC9D730</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
 <UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
 <UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
@@ -273,10 +288,12 @@
 <PRPTBOX promptset="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">
 <UC4RB_KFK_BROKERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_BROKER#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS"/>
 <UC4RB_KFK_SSL_KSTORE_LOCs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_LOC#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS"/>
-<UC4RB_KFK_SSL_KSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10A61C94D6737EB659</UC4RB_KFK_SSL_KSTORE_PWDs.00s.00>
-<UC4RB_KFK_SSL_PWDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10A61C94D6737EB659</UC4RB_KFK_SSL_PWDs.00>
+<UC4RB_KFK_SSL_KSTORE_PWDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_KSTORE_PWDs.00>
+<UC4RB_KFK_SSL_KSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_KSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_KSTORE_PWDs.00s.00>
+<UC4RB_KFK_SSL_PWDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_PWDs.00>
 <UC4RB_KFK_SSL_TSTORE_LOCs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_LOC#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS"/>
-<UC4RB_KFK_SSL_TSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10A61C94D6737EB659</UC4RB_KFK_SSL_TSTORE_PWDs.00s.00>
+<UC4RB_KFK_SSL_TSTORE_PWDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_PWD#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_TSTORE_PWDs.00>
+<UC4RB_KFK_SSL_TSTORE_PWDs.00s.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_SSL_TSTORE_PWD##" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS">--10</UC4RB_KFK_SSL_TSTORE_PWDs.00s.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -284,13 +301,16 @@
 <PROMPTSET name="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE">
 <PRPTBOX promptset="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE">
 <ELEMENT ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="ELEMENT" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE"/>
+<UC4RB_KFK_MESSAGEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_MESSAGE#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE"/>
+<UC4RB_KFK_RETRY_COUNTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_RETRY_COUNT#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE">5</UC4RB_KFK_RETRY_COUNTs.00>
+<UC4RB_KFK_TOPICs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_KFK_TOPIC#" promptsetname="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10FBA41CCE80A626FF9F1A8BC87ECEB23E141388E66BC9D730</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
 <UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
 <UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
@@ -364,28 +384,20 @@
 <PRPTBOX promptset="PCK.AUTOMIC_APACHE_KAFKA.PUB.PROMPTSET.CONNECTION_DETAILS" prptmode="1">
 <UC4RB_KFK_BROKERs.00 altview="0" haslist="0"/>
 <UC4RB_KFK_SSL_TSTORE_LOCs.00 altview="0" haslist="0"/>
-<UC4RB_KFK_SSL_TSTORE_PWDs.00s.00 altview="0" haslist="0">--10A61C94D6737EB659</UC4RB_KFK_SSL_TSTORE_PWDs.00s.00>
 <UC4RB_KFK_SSL_KSTORE_LOCs.00 altview="0" haslist="0"/>
-<UC4RB_KFK_SSL_KSTORE_PWDs.00s.00 altview="0" haslist="0">--10A61C94D6737EB659</UC4RB_KFK_SSL_KSTORE_PWDs.00s.00>
-<UC4RB_KFK_SSL_PWDs.00 altview="0" haslist="0">--10A61C94D6737EB659</UC4RB_KFK_SSL_PWDs.00>
+<UC4RB_KFK_SSL_PWDs.00 altview="0" haslist="0">--10</UC4RB_KFK_SSL_PWDs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE" name="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE" ontop="1">
-<PRPTBOX promptset="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE" prptmode="1">
-<element altview="!PROMPTVALUE|OPSE_HasList|OPSE_AltView,OPUD_AltView|OPSE_AltView,OPUD_AltView" haslist="OPSE_HasList" msginsert="!NOP|" msgnr="!NOP|" promptname="OPSE_Name">
-<values>
-<value>!PROMPTVALUE|OPSE_HasList|OPSEA_Value,OPUDA_Value|OPSE_Value,OPUD_Value</value>
-</values>
-</element>
-</PRPTBOX>
+<PRPTBOX promptset="PCK.AUTOMIC_APACHE_KAFKA.PRV.PROMPTSET.SEND_MESSAGE" prptmode="1"/>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" ontop="1">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" prptmode="1">
-<UC4RB_SUDO_PASSWORDs.00 altview="0" haslist="0">--10FBA41CCE80A626FF9F1A8BC87ECEB23E141388E66BC9D730</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_SUDO_PASSWORDs.00 altview="0" haslist="0">--10</UC4RB_SUDO_PASSWORDs.00>
 <UC4RB_USE_SUDOs.00 altview="0" haslist="0">None</UC4RB_USE_SUDOs.00>
 <UC4RB_SUDO_USERs.00 altview="0" haslist="0"/>
 </PRPTBOX>

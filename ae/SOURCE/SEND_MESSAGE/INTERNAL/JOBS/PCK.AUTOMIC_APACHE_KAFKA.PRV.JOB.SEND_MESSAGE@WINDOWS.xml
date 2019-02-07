@@ -118,7 +118,7 @@
 <MSCRI><![CDATA[@echo off
 
 ! ---------------------------------- Building java arguments ---------------------------------------------------
-: INC PCK.AUTOMIC_JSON.PUB.INCLUDE.ATTACH_RESOURCE
+: INC PCK.AUTOMIC_APACHE_KAFKA.PUB.INCLUDE.ATTACH_RESOURCE
 
 ! Define action specific java options and values
 : SET &ACTION_NAME# = "SendMessageAction"
