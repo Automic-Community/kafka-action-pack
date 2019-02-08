@@ -9,9 +9,16 @@ public class Constants {
 	public static final String ACTION = "action";
 	public static final String HELP = "help";
 
+	public static final String ENV_BUFFER_MEMORY = "BUFFER_MEMORY";
+	public static final int BUFFER_MEMORY = 33554432;
+	
+	public static final String ENV_BATCH_SIZE = "BATCH_SIZE";
+	public static final int BATCH_SIZE = 16384;
+	
 	public static final int CONNECTION_TIMEOUT = 30000;
 	public static final int READ_TIMEOUT = 60000;
 
+	
 	public static final int MINUS_ONE = -1;
 	public static final int ZERO = 0;
 

@@ -83,6 +83,10 @@ public class SendMessageAction extends AbstractKafkaAction {
 		props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, brokerAddress);
 		props.put(ProducerConfig.ACKS_CONFIG, "all");
 		props.put(ProducerConfig.RETRIES_CONFIG, retryCount);
+		props.put(ProducerConfig.BATCH_SIZE_CONFIG,
+				CommonUtil.getEnvParameter(Constants.ENV_BATCH_SIZE, Constants.BATCH_SIZE));
+		props.put(ProducerConfig.BUFFER_MEMORY_CONFIG,
+				CommonUtil.getEnvParameter(Constants.ENV_BUFFER_MEMORY, Constants.BUFFER_MEMORY));
 		props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
 				"org.apache.kafka.common.serialization.StringSerializer");
 		props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
