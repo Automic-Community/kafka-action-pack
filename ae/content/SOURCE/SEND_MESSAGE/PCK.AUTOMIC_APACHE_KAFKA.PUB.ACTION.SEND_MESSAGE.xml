@@ -425,7 +425,36 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC/>
+<DOC><![CDATA[= Action name =
+PCK.AUTOMIC_APACHE_KAFKA.PUB.ACTION.SEND_MESSAGE
+
+= General description =
+This action sends a message to the Kafka broker.
+
+= Inputs =
+- Topic*: 	        Provide topic to use for sending a message. E.g. demoTopic
+- Message*: 	        Provide a message to send to the Broker.
+- Retry Count: 	 	Specify the number of retries of message sending fails on the first try. Default 5
+
+Note: A topic is created if does not exist.
+
+= Behavior =
+* If SSL is enabled, provide the required ssl parameters
+
+=Return Value=
+(none)
+
+= Outputs =
+* Return code is 0 in case of success.
+* Return code is non-zero in case of failure.
+
+= Rollback =
+(none)
+
+= Logging =
+AE logs will be displayed in the AE report.
+
+]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>
