@@ -25,12 +25,12 @@
 </ATTR_VARA>
 <VARA state="1">
 <Variables>
-<row Name="Categories" Value="" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="Company" Value="Custom" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Categories" Value="APACHE KAFKA" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Company" Value="Automic Software GmbH" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Dependencies" Value="PCK.ITPA_SHARED ~&gt; 1.1" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="Description" Value="" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="Homepage" Value="www.yourcompany.com" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="License" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Description" Value="Provide Integration with Apache Kafka ." Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Homepage" Value="www.automic.com" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="License" Value="Automic License" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Name" Value="PCK.AUTOMIC_APACHE_KAFKA" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Package Format Version" Value="0.3.0" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Restricted To Client" Value="" Value1="" Value2="" Value3="" Value4=""/>
