@@ -94,12 +94,12 @@ public class SendMessageAction extends AbstractKafkaAction {
 		// configure the following three settings for SSL Encryption
 		if (ssl) {
 			props.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SSL");
-			if (CommonUtil.checkNotEmpty(sslKeystoreLocation)) {
+			if (CommonUtil.checkNotEmpty(sslTruststoreLocation)) {
 				props.put(SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG, sslTruststoreLocation);
 				props.put(SslConfigs.SSL_TRUSTSTORE_PASSWORD_CONFIG, sslTruststorePassword);
 			}
 			// configure the following three settings for SSL Authentication
-			if (CommonUtil.checkNotEmpty(sslTruststoreLocation)) {
+			if (CommonUtil.checkNotEmpty(sslKeystoreLocation)) {
 				props.put(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG, sslKeystoreLocation);
 				props.put(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG, sslkeystorePassword);
 				props.put(SslConfigs.SSL_KEY_PASSWORD_CONFIG, sslPassword);
