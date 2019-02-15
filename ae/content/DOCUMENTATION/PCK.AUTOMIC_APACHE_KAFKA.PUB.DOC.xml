@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<DOCU name="PCK.AUTOMIC_APACHE_KAFKA.PUB.DOC">
+<HEADER state="1">
+<Title>Pack Documentation</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<DOCU_Docu state="1" type="text">
+<DOC><![CDATA[About the Package
+================================
+Apache Kafka is a community distributed streaming platform capable of handling trillions of events a day. Initially conceived as a messaging queue, Kafka is based on an abstraction of a distributed commit log. Since being created, Kafka has quickly evolved from messaging queue to a full-fledged streaming platform.
+
+=Supported versions=
+v2.1.0
+
+=Setup=
+* Java verion 7 or above should be installed on Agent OS.
+* Internet Connection should be available on Agent OS.
+
+=Common Inputs=
+- Broker Address*: Provide Broker Server address including port. Multiple brokers can be provided as separated by comma.
+- SSL*: Specify whether SSL is enabled on the kafka server.
+- SSL Truststore Location: Provide location of the SSL Truststore. E.g.: /bin/client.trustore.jks
+- SSL Truststore Password : PProvide password for given truststore.
+- SSL Keystore Location	: Provide location of the SSL Keystore. E.g.: /var/private/ss/kafka.client.keystore.jks
+- SSL Keystore Password	: Provide password for given keystore.
+- SSL Password	: Provide SSL password.
+
+=Actions=
+Following actions are supported
+
+* Action name: PCK.AUTOMIC_APACHE_KAFKA.PUB.ACTION.SEND_MESSAGE
+* Action Description: This action sends a message to the Kafka broker.]]></DOC>
+</DOCU_Docu>
+</DOCU>
+</uc-export>

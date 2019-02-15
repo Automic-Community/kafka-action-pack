@@ -9,21 +9,16 @@ public class Constants {
 	public static final String ACTION = "action";
 	public static final String HELP = "help";
 
-	public static final String ENV_CONNECTION_TIMEOUT = "ENV_CONNECTION_TIMEOUT";
-	public static final String ENV_READ_TIMEOUT = "ENV_READ_TIMEOUT";
-	public static final String ENV_API_VERSION = "ENV_API_VERSION";
-	public static final String ENV_PASSWORD = "UC4_DECRYPTED_PWD";
-
-	public static final String AGENT_PASSWORD = "UC4_DECRYPTED_AGENT_PWD";
-
+	public static final String ENV_BUFFER_MEMORY = "BUFFER_MEMORY";
+	public static final int BUFFER_MEMORY = 33554432;
+	
+	public static final String ENV_BATCH_SIZE = "BATCH_SIZE";
+	public static final int BATCH_SIZE = 16384;
+	
 	public static final int CONNECTION_TIMEOUT = 30000;
 	public static final int READ_TIMEOUT = 60000;
-	public static final String API_VERSION = "v4";
 
-	public static final String BASE_URL = "baseurl";
-	public static final String HTTPS = "https";
-	public static final String SKIP_CERT_VALIDATION = "ssl";
-
+	
 	public static final int MINUS_ONE = -1;
 	public static final int ZERO = 0;
 
@@ -31,17 +26,17 @@ public class Constants {
 	public static final String TRUE = "TRUE";
 	public static final String ONE = "1";
 
-	public static final String PATH = "path";
-	public static final String DEFAULT_VARIABLE = "UC4RB_JSN_DATA";
-	public static final String JSON_FILE_PATH = "json";
-	public static final String KEY = "key";
-	public static final String FAIL = "fail";
-	
-	public static final String DOWNLOADPATH = "downloadPath";
-	public static final String VALUE_EXISTS = "UC4RB_JSN_VALUE_EXISTS";
-	public static final String VALUE_TYPE = "valuetype";
-	public static final String OVERWRITE = "overwrite";
-	public static final String VALUE = "value";
+	public static final String BROKER_ADDRESS = "brokradd";
+	public static final String SSL_TRUSTSTORE_LOCATION = "tstoreloc";
+	public static final String SSL_KEYSTORE_LOCATION = "kstoreloc";
+	public static final String SSL_TSTORE_PWD = "SSL_TSTORE_PWD";
+	public static final String SSL_KSTORE_PWD = "SSL_KSTORE_PWD";
+	public static final String SSL_PWD = "SSL_PWD";
+
+	public static final String TOPIC = "topic";
+	public static final String MESSAGE = "message";
+	public static final String RETRY_COUNT = "retrycount";
+	public static final String SSL = "ssl";
 
 	private Constants() {
 	}

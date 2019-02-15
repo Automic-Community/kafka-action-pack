@@ -1,7 +1,8 @@
 # Package Build Configuration
 name: PCK.AUTOMIC_APACHE_KAFKA
 
-source: ae
+appdata: ae/APPDATA
+source: ae/content
   
 # binary object resource mapping will be defined here
 binaries:
