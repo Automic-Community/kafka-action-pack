@@ -116,6 +116,7 @@ Init Action
 
 Connect to Apache Kafka
     Action Set    &UC4RB_KFK_BROKER#    ${Brkr_Adrs}
+    Action Set    &UC4RB_KFK_SSL#    ${SSL}
     Action Set    &UC4RB_KFK_SSL_TSTORE_LOC#    ${SSL_Tru_Store_Loc}
     Action Set    &UC4RB_KFK_SSL_TSTORE_PWD#    ${SSL_Tru_Store_Pwd}
     Action Set    &UC4RB_KFK_SSL_KSTORE_LOC#    ${SSL_Key_Store_Loc}
