@@ -9,20 +9,25 @@
 <DOCU_Docu state="1" type="text">
 <DOC><![CDATA[About the Package
 ================================
-Apache Kafka is a community distributed streaming platform capable of handling trillions of events a day. Initially conceived as a messaging queue, Kafka is based on an abstraction of a distributed commit log. Since being created, Kafka has quickly evolved from messaging queue to a full-fledged streaming platform.
+Kafka is a distributed publish-subscribe messaging system and a robust queue that can handle a high volume of data and enables you to pass messages from one end-point to another.
+Kafka is suitable for both offline and online message consumption. Kafka messages are persisted on the disk and replicated within the cluster to prevent data loss.
+It is built on top of the Zoo-Keeper synchronization service. It integrates very well with Apache Storm and Spark for real-time streaming data analysis.
+
+So, it is used for stream processing, website activity tracking, metrics collection and monitoring, log aggregation, real-time analytics, CEP, ingesting data into Spark,
+ingesting data into Hadoop,CQRS, replay messages, error recovery, and guaranteed distributed commit log for in-memory computing (microservices).
 
 =Supported versions=
 v2.1.0
 
 =Setup=
-* Java verion 7 or above should be installed on Agent OS.
+* Java version 7 or above should be installed on Agent OS.
 * Internet Connection should be available on Agent OS.
 
 =Common Inputs=
 - Broker Address*: Provide Broker Server address including port. Multiple brokers can be provided as separated by comma.
 - SSL*: Specify whether SSL is enabled on the kafka server.
 - SSL Truststore Location: Provide location of the SSL Truststore. E.g.: /bin/client.trustore.jks
-- SSL Truststore Password : PProvide password for given truststore.
+- SSL Truststore Password : Provide password for given truststore.
 - SSL Keystore Location	: Provide location of the SSL Keystore. E.g.: /var/private/ss/kafka.client.keystore.jks
 - SSL Keystore Password	: Provide password for given keystore.
 - SSL Password	: Provide SSL password.
